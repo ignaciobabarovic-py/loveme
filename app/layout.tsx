@@ -18,8 +18,8 @@ export default function RootLayout({
           .hk-back {
             position: fixed;
             top: 22px;
-            left: 30px;
-            z-index: 9999;
+            right: 30px;
+            z-index: 99999;
             display: flex;
             align-items: center;
             gap: 10px;
