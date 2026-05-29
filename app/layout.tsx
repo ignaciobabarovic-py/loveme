@@ -22,26 +22,36 @@ export default function RootLayout({
             z-index: 99999;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-family: 'Space Mono', monospace;
             font-size: 10px;
             letter-spacing: .22em;
             text-transform: uppercase;
-            color: rgba(255,255,255,.7);
+            color: #050505;
             text-decoration: none;
             padding: 10px 18px;
-            border: 1px solid rgba(201,169,110,0.4);
-            background: rgba(5,5,5,.85);
-            backdrop-filter: blur(12px);
-            transition: color .3s, border-color .3s, background .3s;
+            border: none;
+            background: #EFEDE6;
+            transition: background .3s, color .3s;
           }
           .hk-back:hover {
-            color: #C9A96E;
-            border-color: rgba(201,169,110,0.9);
-            background: rgba(5,5,5,.95);
+            background: #FF4D2E;
+            color: #fff;
+          }
+          .hk-back:hover .hk-star {
+            fill: #fff;
+          }
+          .hk-star {
+            flex-shrink: 0;
+            transition: fill .3s;
           }
         `}</style>
-        <a className="hk-back" href="javascript:history.back()">← HokuHele</a>
+        <a className="hk-back" href="https://loveme-umber.vercel.app">
+          <svg className="hk-star" width="10" height="10" viewBox="-12 -12 24 24" fill="#FF4D2E">
+            <path d="M0,-11 C0,-4 4,0 11,0 C4,0 0,4 0,11 C0,4 -4,0 -11,0 C-4,0 0,-4 0,-11 Z"/>
+          </svg>
+          HokuHele
+        </a>
         {children}
       </body>
     </html>
