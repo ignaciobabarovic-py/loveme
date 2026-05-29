@@ -17,8 +17,8 @@ export default function RootLayout({
         <style>{`
           .hk-back {
             position: fixed;
-            top: 22px;
-            right: 30px;
+            bottom: 36px;
+            left: 36px;
             z-index: 99999;
             display: flex;
             align-items: center;
@@ -27,20 +27,21 @@ export default function RootLayout({
             font-size: 10px;
             letter-spacing: .22em;
             text-transform: uppercase;
-            color: rgba(255,255,255,.55);
+            color: rgba(255,255,255,.7);
             text-decoration: none;
-            padding: 8px 14px;
-            border: 1px solid rgba(255,255,255,.12);
-            background: rgba(5,5,5,.7);
-            backdrop-filter: blur(10px);
-            transition: color .3s, border-color .3s;
+            padding: 10px 18px;
+            border: 1px solid rgba(201,169,110,0.4);
+            background: rgba(5,5,5,.85);
+            backdrop-filter: blur(12px);
+            transition: color .3s, border-color .3s, background .3s;
           }
           .hk-back:hover {
-            color: #fff;
-            border-color: rgba(255,255,255,.4);
+            color: #C9A96E;
+            border-color: rgba(201,169,110,0.9);
+            background: rgba(5,5,5,.95);
           }
         `}</style>
-        <a className="hk-back" href="https://hokuhele.studio">← HokuHele</a>
+        <a className="hk-back" href="javascript:history.back()">← HokuHele</a>
         {children}
       </body>
     </html>
